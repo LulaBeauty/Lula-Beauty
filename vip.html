@@ -1,0 +1,445 @@
+<html class="wide wow-animation" lang="en">
+<head>
+  <title>VIP</title>
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/logo-dark-3-158x58.ico" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .services-heading {
+      text-align: center;
+      color: #9fa0ee;
+      font-family: 'Dancing Script', cursive;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 36px;
+    }
+
+    .card {
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .right-column {
+      position: sticky;
+      top: 20px;
+    }
+
+    .modern-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .modern-list li {
+      background-color: #f4f6f8;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .modern-list li:hover {
+      transform: translateX(10px);
+      background-color: #9fa0ee;
+    }
+
+    .modern-list li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .modern-list li a:hover {
+      color: #ffffff;
+    }
+
+    .modal-body img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .custom-margin {
+      margin-left: 2cm; /* Adds 2 cm space on the left side of the service list */
+    }
+    .card {
+      margin: 0.2cm; /* Adds 1 cm total space (0.5 cm on each side) */
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="ie-panel">
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+      <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+    </a>
+  </div>
+
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <div class="page">
+    <header class="section page-header">
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic rd-navbar-classic-minimal" data-layout="rd-navbar-fixed" data-lg-stick-up="true">
+          <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+              <div class="rd-navbar-panel">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <div class="rd-navbar-brand">
+                  <a class="brand" href="index.html">
+                    <img class="brand-logo-dark" src="images/logo-default-392x116.png" alt="Logo" width="196" height="58" />
+                  </a>
+                </div>
+              </div>
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap d-flex align-items-center">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html#services">Services</a></li>
+
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="About.html">About Us</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contact.html">Contact Us</a></li>
+                  </ul>
+                  <button class="btn btn-link p-0 ms-3" id="search-icon">
+                    <i class="bi bi-search fs-5"></i>
+                  </button>
+                 <!--
+                  <button class="btn btn-link p-0 ms-3" id="dark-mode-toggle">
+                    <i class="bi bi-moon fs-5"></i>
+                  </button>-->
+                </div>
+              </div>
+              <div id="search-container" style="display:none; position: absolute; top: 50px; right: 10px;">
+                <input type="text" id="search-input" placeholder="Search Services..." />
+                <button onclick="searchServices()">Search</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <h2 class="services-heading">VIP Services</h2>
+    
+      <div class="row">
+        <!-- Hair Color Cards (Left Side) -->
+        <div class="col-md-7 p-0">
+          <div class="row">
+            <div class="col-md-4 mb-4 p-0">
+              <div class="card">
+                <img src="images/Vip1.jpg" class="card-img-top zoom-img" alt="Hair Color 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/Vip1.jpg')">
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 p-0">
+              <div class="card">
+                <img src="images/vip2.jpg" class="card-img-top zoom-img" alt="Hair Color 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/vip2.jpg')">
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 p-0">
+              <div class="card">
+                <img src="images/vip4.jpg" class="card-img-top zoom-img" alt="Hair Color 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/vip4.jpg')">
+              </div>
+            </div>
+            <!-- New images added below -->
+            <div class="col-md-4 mb-4 p-0">
+              <div class="card">
+                <img src="images/vip3.jpg" class="card-img-top zoom-img" alt="Hair Color 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/vip3.jpg')">
+              </div>
+            </div>
+            <!-- New images added below -->
+            <div class="col-md-4 mb-4 p-0">
+              <div class="card">
+                <img src="images/vip5.jpg" class="card-img-top zoom-img" alt="Hair Color 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/vip5.jpg')">
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 p-0">
+              <div class="card">
+                <img src="images/vip6.jpg" class="card-img-top zoom-img" alt="Hair Color 6" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('images/vip6.jpg')">
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Services List (Right Side) -->
+       <!-- Services List (Right Side) --><!-- Services List (Right Side) -->
+<div class="col-md-4 p-0 custom-margin">
+  <h4 class="text-center mb-4" style="color: #9fa0ee;">Other Services</h4>
+  <ul class="modern-list" id="servicesList">
+    <li><a href="hair_color.html" id="hairColorLink">Hair Color</a></li>
+    <li><a href="Hair_Extension.html" id="hairTreatmentLink">Hair Extension</a></li>
+    <li><a href="Bride.html" id="manicureLink">Bride</a></li>
+    <li><a href="vip.html" id="pedicureLink">VIP Events</a></li>
+    <li><a href="brow_tato.html" id="facialLink">Brow Tatto</a></li>
+    <li><a href="lash_extention.html" id="makeupLink">Lash Extension</a></li>
+    <li><a href="skincare.html" id="makeupLink">Skin Care</a></li>
+    <li><a href="SpaManicure.html" id="makeupLink">Spa Manicure & Pedicure</a></li>
+    <li><a href="makeup.html" id="makeupLink">MakeUP</a></li>
+  </ul>
+</div>
+
+
+      </div>
+    
+      <!-- Image Modal -->
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body text-center" style="overflow: auto;">
+              <img id="modalImage" class="img-fluid" src="" alt="Full Image" style="max-width: 100%; max-height: 90vh; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <img src="images/logo-dark-3-158x58.png" alt="Company Logo" />
+        <p style="color: white;">LULA Beauty Center</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">services</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="contact.html">contact.</a></li>
+         
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="https://www.google.com/maps" target="_blank"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+          <li>
+            <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> Phone</a>
+          </li>
+          <li> <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+         <li> <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a></li>
+         
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+       
+        <div class="social-links">
+          <a href="https://www.facebook.com/?locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+       
+          <a href="https://www.instagram.com/accounts/login/?hl=ar"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.snapchat.com/"><i class="fab fa-snapchat-ghost"></i></a>
+        </div>
+       
+        
+      </div>
+    </div>
+    
+  </div>
+
+
+</footer>
+
+ 
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Dark Mode Toggle
+      document.getElementById("dark-mode-toggle")?.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        
+        // Update all text colors dynamically
+        const elementsToUpdate = document.querySelectorAll("body, a, h1, h2, h3, h4, h5, h6, p, .modern-list li, .card");
+        elementsToUpdate.forEach(el => {
+          if (document.body.classList.contains("dark-mode")) {
+            el.style.color = "#ffffff";
+            el.style.backgroundColor = el.classList.contains("card") || el.classList.contains("modern-list-item") ? "#333333" : "";
+          } else {
+            el.style.color = "";
+            el.style.backgroundColor = "";
+          }
+          const icons = document.querySelectorAll("i");
+  icons.forEach(icon => {
+    if (document.body.classList.contains("dark-mode")) {
+      icon.style.color = "#ffffff";
+    } else {
+      icon.style.color = "";
+    }
+  });
+        });
+      });
+      
+    </script>
+
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Change Image for Modal
+      function changeImage(imageSrc) {
+        document.getElementById('modalImage').src = imageSrc;
+      }
+    </script>
+    <script>
+      // Get the current page URL
+      var currentPage = window.location.pathname.split("/").pop();
+    
+      // Select all links in the services list
+      var links = document.querySelectorAll("#servicesList a");
+    
+      // Iterate over the links and check if the href matches the current page
+      links.forEach(function(link) {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const servicesLink = document.querySelector('.rd-navbar-nav .rd-nav-item a[href="index.html#services"]');
+        const homeLink = document.querySelector('.rd-navbar-nav .rd-nav-item a[href="index.html"]');
+        const allNavLinks = document.querySelectorAll('.rd-navbar-nav .rd-nav-item a');
+    
+        // List of service page filenames
+        const servicePages = [
+            "hair_color.html",
+            "Hair_Extension.html",
+            "Bride.html",
+            "vip.html",
+            "brow_tato.html",
+            "lash_extention.html",
+            "skincare.html",
+            "SpaManicure.html",
+            "makeup.html"
+        ];
+    
+        function updateActiveTab() {
+            const currentPath = window.location.pathname.split("/").pop(); // Get current page file name
+    
+            // Check if the current page is a service page
+            if (servicePages.includes(currentPath)) {
+                // Highlight the "Services" tab
+                servicesLink.parentElement.classList.add("active");
+    
+                // Remove 'active' from Home tab
+                homeLink.parentElement.classList.remove("active");
+            } else if (currentPath === "index.html" || currentPath === "") {
+                // Default behavior for Home page
+                servicesLink.parentElement.classList.remove("active");
+                homeLink.parentElement.classList.add("active");
+            } else {
+                // Remove 'active' from all if no match
+                servicesLink.parentElement.classList.remove("active");
+            }
+    
+            // Ensure no other tabs are accidentally highlighted
+            allNavLinks.forEach(link => {
+                if (link !== servicesLink && link !== homeLink) {
+                    link.parentElement.classList.remove("active");
+                }
+            });
+        }
+    
+        // Run the function on page load
+        updateActiveTab();
+    });
+    
+    </script>
+    
+    <div id="search-container" style="display:none; position: absolute; top: 50px; right: 10px;">
+      <input type="text" id="search-input" placeholder="Search Services..." />
+      <button onclick="searchServices()">Search</button>
+  </div>
+  
+  <script>
+    document.getElementById('search-icon').addEventListener('click', function () {
+        document.getElementById('search-container').style.display = 'block';
+    });
+ 
+    function searchServices() {
+        var searchTerm = document.getElementById('search-input').value.toLowerCase();
+        var servicePages = {
+            "hair color": "hair_color.html",
+            "hair extension": "Hair_Extension.html",
+            "bride": "Bride.html",
+            "vip events": "vip.html",
+            "brow tattoo": "brow_tato.html",
+            "lash extension": "lash_extention.html",
+            "skin care": "skincare.html",
+            "spa manicure & pedicure": "SpaManicure.html",
+            "makeup": "makeup.html"
+        };
+ 
+        if (servicePages[searchTerm]) {
+            window.location.href = servicePages[searchTerm];
+        } else {
+            alert("No matching services found.");
+        }
+ 
+        document.getElementById('search-container').style.display = 'none';
+    }
+ </script>
+ 
+  
+  </div>
+</body>
+</html>

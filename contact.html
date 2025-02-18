@@ -1,0 +1,385 @@
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>contact us</title>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/logo-dark-3-158x58.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+<body> <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+      <header class="section page-header">
+        <!-- RD Navbar -->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic rd-navbar-classic-minimal" data-layout="rd-navbar-fixed" data-lg-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel -->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle -->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand -->
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="index.html">
+                      <img class="brand-logo-dark" src="images/logo-default-392x116.png" alt="Logo" width="196" height="58" />
+                    </a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap d-flex align-items-center">
+                    <!-- RD Navbar Nav -->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html#services">Services</a></li>
+
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About Us</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contact.html">Contacts</a></li>
+                    </ul>
+                    <!-- Search Icon -->
+                    <button class="btn btn-link p-0 ms-3" id="search-icon">
+                      <i class="bi bi-search fs-5"></i>
+                    </button>
+                   <!--
+                  <button class="btn btn-link p-0 ms-3" id="dark-mode-toggle">
+                    <i class="bi bi-moon fs-5"></i>
+                  </button>-->
+                  </div>
+                </div>
+                <div id="search-container" style="display:none; position: absolute; top: 50px; right: 10px;">
+                  <input type="text" id="search-input" placeholder="Search Services..." />
+                  <button onclick="searchServices()">Search</button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+<!--     body    -->
+
+<style>
+  
+
+  body {
+      font-family: "Cookie", "Times New Roman", Times, serif;
+      background-color: #ffffff;
+  }
+  h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #9fa0ee;
+      text-align: center;
+      margin-top: 20px;
+      animation: fadeIn 1s ease-in-out;
+  }
+  hr.animated-line {
+      width: 0;
+      height: 4px;
+      background-color: #9fa0ee;
+      margin: 10px auto;
+      border: none;
+      animation: growLine 3s ease-in-out forwards;
+  }
+  @keyframes growLine {
+      0% { width: 0; }
+      100% { width: 150px; }
+  }
+  @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+  }
+  .contact-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      animation: fadeIn 1s ease-in-out;
+  }
+  .form-box {
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+  }
+  .form-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  .form-box label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #9fa0ee;
+  }
+  .form-box input,
+  .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .form-box input:focus,
+  .form-box textarea:focus {
+      border-color: #9fa0ee;
+      outline: none;
+      box-shadow: 0 0 10px rgba(159, 160, 238, 0.3);
+  }
+  .form-box button {
+      background-color: #9fa0ee;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+  }
+  .form-box button:hover {
+      background-color: #8889d2;
+      transform: scale(1.05);
+  }
+  .map {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+  }
+  .map:hover {
+      transform: scale(1.05);
+  }
+
+  /* Contact Details Section */
+  .contact-details {
+      background-color: #9fa0ee;
+      padding: 30px;
+      border-radius: 8px;
+      color: white;
+      margin-top: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+  }
+  .contact-details:hover {
+      transform: scale(1.05);
+  }
+  .contact-details h4 {
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: white;
+  }
+  .contact-details p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+  }
+  .contact-details a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+  }
+  .contact-details a:hover {
+      color: #ffdd57;
+  }
+  /* Zoom-In Effect on Click */
+  .zoom-in-effect {
+      transition: transform 0.3s ease;
+  }
+  .zoom-in-effect:active {
+      transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  <h1>Contact Us</h1>
+  <hr class="animated-line">
+</header>
+
+<!-- Contact Section -->
+<div class="contact-container">
+  <!-- Booking and Suggestions -->
+<div class="text-center my-4">
+  <h5 style="color: #9fa0ee;">For booking or any suggestions, feel free to contact us or visit us!</h5>
+</div>
+
+  <div class="row g-4">
+      <!-- Form Section -->
+      <div class="col-lg-6">
+          <div class="form-box">
+              <h4 class="mb-4" style="color:#9fa0ee;">Send Us a Message</h4>
+              <form action="mailto:hadarzaxoli@gmail.com" method="post" enctype="text/plain">
+                  <div class="mb-3">
+                      <label for="name">Your Name</label>
+                      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email">Your Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="phone">Your Phone Number</label>
+                      <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="message">Your Message</label>
+                      <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
+              </form>
+          </div>
+      </div>
+
+      <!-- Map Section -->
+      <div class="col-lg-6">
+          <h4 class="mb-4" style="color:#9fa0ee;">Our Location</h4>
+          <div class="map">
+              <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.1234567890!2d42.6681234!3d37.1524567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x400234abcd!2sZakho,%20Shqa!5e0!3m2!1sen!2siq!4v1700000000"
+                  width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+         
+      </div>
+  </div>
+</div>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <img src="images/logo-dark-3-158x58.png" alt="Company Logo" />
+            <p style="color: white;">LULA Beauty Center</p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#services">services</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="contact.html">contact.</a></li>
+             
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a href="https://www.google.com/maps" target="_blank"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+              <li>
+                <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> Phone</a>
+              </li>
+              <li> <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+             <li> <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a></li>
+             
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            
+            <div class="social-links">
+              <a href="https://www.facebook.com/?locale=ar_AR"><i class="fab fa-facebook-f"></i></a>
+           
+              <a href="https://www.instagram.com/accounts/login/?hl=ar"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.snapchat.com/"><i class="fab fa-snapchat-ghost"></i></a>
+            </div>
+           
+            
+          </div>
+        </div>
+        
+      </div>
+
+
+   </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+   
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/script.js"></script>
+     <script>
+       // Highlight the active page in the navbar
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".rd-navbar-nav .rd-nav-item a");
+        const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
+    
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === currentPage) {
+            // Add the 'active' class to the parent list item
+            link.parentElement.classList.add("active");
+          } else {
+            // Remove 'active' class from other items
+            link.parentElement.classList.remove("active");
+          }
+        });
+      });
+    </script>
+
+    <div id="search-container" style="display:none; position: absolute; top: 50px; right: 10px;">
+      <input type="text" id="search-input" placeholder="Search Services..." />
+      <button onclick="searchServices()">Search</button>
+  </div>
+  
+  <script>
+    document.getElementById('search-icon').addEventListener('click', function () {
+        document.getElementById('search-container').style.display = 'block';
+    });
+ 
+    function searchServices() {
+        var searchTerm = document.getElementById('search-input').value.toLowerCase();
+        var servicePages = {
+            "hair color": "hair_color.html",
+            "hair extension": "Hair_Extension.html",
+            "bride": "Bride.html",
+            "vip events": "vip.html",
+            "brow tattoo": "brow_tato.html",
+            "lash extension": "lash_extention.html",
+            "skin care": "skincare.html",
+            "spa manicure & pedicure": "SpaManicure.html",
+            "makeup": "makeup.html"
+        };
+ 
+        if (servicePages[searchTerm]) {
+            window.location.href = servicePages[searchTerm];
+        } else {
+            alert("No matching services found.");
+        }
+ 
+        document.getElementById('search-container').style.display = 'none';
+    }
+ </script>
+ 
+  
+    
+  </body>
+</html>
